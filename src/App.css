@@ -1,0 +1,26 @@
+
+.App {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    min-width: 600px;
+}
+.App .App-header {
+    width: 100%;
+    height: 40px;
+}
+
+.App .content {
+    background-color: #FFF;
+    position: relative;
+}
+
+.App .content .content_left_nav {
+    width: 140px;
+    float: left;
+}
+
+.App .content .content_right {
+    float: left;
+    padding : 10px;
+}
