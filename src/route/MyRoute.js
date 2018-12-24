@@ -14,7 +14,6 @@ class MyRoute extends Component{
             <div>
                 <Router>
                    <div>
-
                        <Route path="/content1" component={Content1}></Route>
                        <Route path="/content2" component={Content2}></Route>
                    </div>

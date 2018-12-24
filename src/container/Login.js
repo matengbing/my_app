@@ -33,7 +33,7 @@ class Login extends Component{
         return (
             <div>
 
-                {this.state.isLogin ? <Redirect to={this.state.redirectTo} /> : console.log("ss") }
+
 
                 <div className="login_form">
                     <h3 style={{textAlign: "center"}}>Login</h3>
