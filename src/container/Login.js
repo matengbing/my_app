@@ -29,12 +29,8 @@ class Login extends Component{
     }
 
     render(){
-
         return (
             <div>
-
-
-
                 <div className="login_form">
                     <h3 style={{textAlign: "center"}}>Login</h3>
                     <p className="err_msg">{this.state.err_msg}</p>

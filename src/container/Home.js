@@ -3,8 +3,6 @@ import NAV from '../nav/NAV';
 import '../App.css';
 import LeftNAV from '../nav/LeftNAV';
 import MyRoute  from '../route/MyRoute';
-import Login from "./Login";
-import {Route,BrowserRouter as Router, Switch,Redirect} from 'react-router-dom';
 
 
 class Home extends Component{
@@ -29,11 +27,6 @@ class Home extends Component{
                     </div>
                     <div className="content_right">
                         <MyRoute/>
-                        {
-                            this.state.isLogin ? <Redirect to={this.state.redirectTo} />
-                                :
-                                null
-                        }
                     </div>
                 </div>
             </div>

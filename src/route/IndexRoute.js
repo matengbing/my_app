@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Route,BrowserRouter as Router, Switch,Redirect} from 'react-router-dom';
 import Login from '../container/Login';
 import Home from '../container/Home';
+import AuthRoute from '../route/AuthRoute';
 
 class IndexRoute extends Component{
     constructor(props){
@@ -20,7 +21,8 @@ class IndexRoute extends Component{
                 <div>
                     <Router>
                         <div>
-                            <Route path="/login" exact="true" component={Login}></Route>
+                            <AuthRoute/>
+                            <Route path="/login" exact component={Login}></Route>
                             <Route path="/home" component={Home}></Route>
                         </div>
                     </Router>
