@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {Route,BrowserRouter as Router, Switch,Redirect} from 'react-router-dom';
+import {Route,BrowserRouter as Router, Switch,Redirect,withRouter} from 'react-router-dom';
 import Login from '../container/Login';
 import Home from '../container/Home';
 import AuthRoute from '../route/AuthRoute';
-
+import MyRoute from '../route/MyRoute'
 class IndexRoute extends Component{
     constructor(props){
         super(props);
@@ -17,17 +17,13 @@ class IndexRoute extends Component{
 
     render(){
         return (
-            <div>
+            <Router>
                 <div>
-                    <Router>
-                        <div>
-                            <AuthRoute/>
-                            <Route path="/login" exact component={Login}></Route>
-                            <Route path="/home" component={Home}></Route>
-                        </div>
-                    </Router>
+                    <AuthRoute/>
+                    <Route path="/login" exact component={Login}></Route>
+                    <Route path="/home" component={MyRoute}></Route>
                 </div>
-            </div>
+            </Router>
         )
     }
 }

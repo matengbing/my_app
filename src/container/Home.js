@@ -26,7 +26,7 @@ class Home extends Component{
                         <LeftNAV></LeftNAV>
                     </div>
                     <div className="content_right">
-                        <MyRoute/>
+                        {this.props.children}
                     </div>
                 </div>
             </div>

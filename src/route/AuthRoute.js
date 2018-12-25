@@ -24,7 +24,7 @@ class AuthRoute extends Component{
             return null;
         }
 
-        this.props.history.push('/login')
+        // this.props.history.push('/login')
         //获取用户信息
         // axios.get('http://www.baidu.com').then((res)=>{
         //     if(res.status==200){
