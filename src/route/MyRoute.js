@@ -14,6 +14,7 @@ class MyRoute extends Component{
         return (
             <Router>
                <Home>
+
                    <Route path="/home/content1" component={Content1}></Route>
                    <Route path="/home/content2" component={Content2}></Route>
                </Home>
