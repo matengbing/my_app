@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import NAV from '../nav/NAV';
 import '../App.css';
 import LeftNAV from '../nav/LeftNAV';
-import MyRoute  from '../route/MyRoute';
 
 
 class Home extends Component{

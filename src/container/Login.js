@@ -1,7 +1,5 @@
 import React,{Component} from 'react';
 import './login.css';
-import {Route,BrowserRouter as Router, Switch,Redirect} from 'react-router-dom';
-import Home from '../container/Home';
 
 class Login extends Component{
     constructor(props){
@@ -14,18 +12,16 @@ class Login extends Component{
             err_msg:""
         }
 
-        this.handleUsernameChange=this.handleUsernameChange.bind(this);
-        this.handlePasswordChange=this.handlePasswordChange.bind(this)
+        this.handleChange=this.handleChange.bind(this);
+        this.handleSubmit=this.handleSubmit.bind(this)
     }
 
-    handleUsernameChange(event){
-        this.setState({
-            username: event.target.value
-        });
+    handleSubmit(){
+        console.log("登录");
     }
 
-    handlePasswordChange(event){
-        this.setState({password: event.target.value});
+    handleChange(key,e){
+        this.setState({[key]: e.target.value});
     }
 
     render(){
@@ -35,14 +31,16 @@ class Login extends Component{
                     <h3 style={{textAlign: "center"}}>Login</h3>
                     <p className="err_msg">{this.state.err_msg}</p>
                     <input type="text" value={this.state.username} placeholder="用户名"
-                           onChange={this.handleUsernameChange}
+                           onChange={(e)=>{this.handleChange('username',e)}}
                     />
                     <br/>
                     <input type="password" value={this.state.password} placeholder="密码"
-                        onChange={this.handlePasswordChange}
+                        onChange={(e)=>{this.handleChange('password',e)}}
                     />
                     <br/>
-                    <input type="button" value="Login" />
+                    <input type="button" value="Login"
+                        onClick={(e)=>{this.handleSubmit()}}
+                    />
                 </div>
             </div>
         )

@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import {Route,BrowserRouter as Router, Switch,Redirect} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 import {isLogin} from  '../redux/User.redux';
 import {connect} from 'react-redux';
